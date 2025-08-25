@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -20,7 +19,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { showError } from "@/utils/toast";
-import { useAuth } from "@/context/AuthContext"; // Import useAuth
+import { useAuth } from "../context/AuthContext"; // Corrected import path
 
 const formSchema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
@@ -28,7 +27,7 @@ const formSchema = z.object({
 });
 
 const Login = () => {
-  const { login } = useAuth(); // Use the login function from AuthContext
+  const { login } = useAuth();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -38,11 +37,9 @@ const Login = () => {
   });
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
-    // In a real application, you would send these credentials to your backend for authentication.
-    // For now, we simulate a successful login and update the AuthContext.
     console.log("Login attempt with:", values);
     if (values.email === "test@example.com" && values.password === "password") {
-      login(values.email); // Call login from AuthContext
+      login(values.email);
     } else {
       showError("Invalid credentials. Please try again.");
     }
