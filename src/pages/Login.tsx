@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -19,7 +19,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { showSuccess, showError } from "@/utils/toast";
+import { showError } from "@/utils/toast";
+import { useAuth } from "@/context/AuthContext"; // Import useAuth
 
 const formSchema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
@@ -27,7 +28,7 @@ const formSchema = z.object({
 });
 
 const Login = () => {
-  const navigate = useNavigate();
+  const { login } = useAuth(); // Use the login function from AuthContext
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -38,9 +39,13 @@ const Login = () => {
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     // In a real application, you would send these credentials to your backend for authentication.
+    // For now, we simulate a successful login and update the AuthContext.
     console.log("Login attempt with:", values);
-    showSuccess("Login successful! (Simulated)");
-    navigate("/"); // Redirect to home or dashboard after successful login
+    if (values.email === "test@example.com" && values.password === "password") {
+      login(values.email); // Call login from AuthContext
+    } else {
+      showError("Invalid credentials. Please try again.");
+    }
   };
 
   return (
@@ -62,7 +67,7 @@ const Login = () => {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="m@example.com" {...field} />
+                      <Input placeholder="test@example.com" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -75,7 +80,7 @@ const Login = () => {
                   <FormItem>
                     <FormLabel>Password</FormLabel>
                     <FormControl>
-                      <Input type="password" placeholder="••••••••" {...field} />
+                      <Input type="password" placeholder="password" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -86,12 +91,6 @@ const Login = () => {
               </Button>
             </form>
           </Form>
-          <div className="mt-4 text-center text-sm">
-            Don't have an account?{" "}
-            <Link to="/register" className="underline">
-              Sign up
-            </Link>
-          </div>
         </CardContent>
       </Card>
     </div>
