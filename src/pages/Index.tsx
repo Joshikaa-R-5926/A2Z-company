@@ -220,7 +220,7 @@ const Index = () => {
               <div className="grid gap-6 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold">Basic</h3>
-                  <p className="text-4xl font-bold">$29<span className="text-lg font-normal text-gray-500 dark:text-gray-400">/mo</span></p>
+                  <p className="text-4xl font-bold">₹2,499<span className="text-lg font-normal text-gray-500 dark:text-gray-400">/mo</span></p>
                   <p className="text-gray-500 dark:text-gray-400">For small teams and startups.</p>
                 </div>
                 <ul className="grid gap-4 text-left">
@@ -249,7 +249,7 @@ const Index = () => {
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold">Pro</h3>
-                  <p className="text-4xl font-bold">$79<span className="text-lg font-normal text-gray-500 dark:text-gray-400">/mo</span></p>
+                  <p className="text-4xl font-bold">₹6,499<span className="text-lg font-normal text-gray-500 dark:text-gray-400">/mo</span></p>
                   <p className="text-gray-500 dark:text-gray-400">For growing businesses.</p>
                 </div>
                 <ul className="grid gap-4 text-left">
