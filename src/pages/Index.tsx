@@ -71,9 +71,9 @@ const Index = () => {
                 </div>
               </div>
               <img
-                alt="Hero"
+                alt="Abstract futuristic background representing innovation"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
-                src="/placeholder.svg"
+                src="https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               />
             </div>
           </div>
