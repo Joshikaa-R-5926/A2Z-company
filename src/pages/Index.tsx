@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "../context/AuthContext";
-import { Rocket, Zap, Shield, Cloud, BarChart, Users, Bot, FileText, FlaskConical, Lightbulb } from "lucide-react";
+import { Rocket, Zap, Shield, Cloud, BarChart, Users, Bot, FileText, FlaskConical, Lightbulb, Check } from "lucide-react";
 
 const Index = () => {
   const { isLoggedIn } = useAuth();
@@ -26,9 +26,9 @@ const Index = () => {
           <a className="text-sm font-medium hover:underline underline-offset-4" href="#researches">
             Researches
           </a>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
+          <a className="text-sm font-medium hover:underline underline-offset-4" href="#pricing">
             Pricing
-          </Link>
+          </a>
           <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
             Contact
           </Link>
@@ -201,7 +201,107 @@ const Index = () => {
             </div>
           </div>
         </section>
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
+        <section id="pricing" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                  Pricing
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Flexible Plans for Teams of All Sizes
+                </h2>
+                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  Choose the plan that's right for you and unlock the full potential of our platform.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-12">
+              <div className="grid gap-6 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold">Basic</h3>
+                  <p className="text-4xl font-bold">$29<span className="text-lg font-normal text-gray-500 dark:text-gray-400">/mo</span></p>
+                  <p className="text-gray-500 dark:text-gray-400">For small teams and startups.</p>
+                </div>
+                <ul className="grid gap-4 text-left">
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>Up to 10 users</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>Core Features</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>Basic Analytics</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>Community Support</span>
+                  </li>
+                </ul>
+                <Button className="w-full">Choose Plan</Button>
+              </div>
+              <div className="grid gap-6 p-6 rounded-lg shadow-lg transition-shadow bg-white dark:bg-gray-950 border-2 border-primary relative">
+                <div className="absolute top-0 -translate-y-1/2 bg-primary text-primary-foreground px-3 py-1 text-sm font-semibold rounded-full">
+                  Most Popular
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold">Pro</h3>
+                  <p className="text-4xl font-bold">$79<span className="text-lg font-normal text-gray-500 dark:text-gray-400">/mo</span></p>
+                  <p className="text-gray-500 dark:text-gray-400">For growing businesses.</p>
+                </div>
+                <ul className="grid gap-4 text-left">
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>Up to 50 users</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>Advanced Features</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>Advanced Analytics</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>Priority Support</span>
+                  </li>
+                </ul>
+                <Button className="w-full">Choose Plan</Button>
+              </div>
+              <div className="grid gap-6 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold">Enterprise</h3>
+                  <p className="text-4xl font-bold">Custom</p>
+                  <p className="text-gray-500 dark:text-gray-400">For large-scale organizations.</p>
+                </div>
+                <ul className="grid gap-4 text-left">
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>Unlimited users</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>All Features Included</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>Dedicated Support</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-green-500" />
+                    <span>Custom Integrations</span>
+                  </li>
+                </ul>
+                <Button variant="outline" className="w-full">Contact Sales</Button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-950">
           <div className="container px-4 md:px-6">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="space-y-4">
