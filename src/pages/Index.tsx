@@ -8,7 +8,7 @@ const Index = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950">
-      <header className="px-4 lg:px-6 h-14 flex items-center shadow-sm">
+      <header className="px-4 lg:px-6 h-14 flex items-center shadow-sm sticky top-0 z-50 bg-white dark:bg-gray-950">
         <Link to="/" className="flex items-center justify-center">
           <Rocket className="h-6 w-6 text-primary" />
           <span className="ml-2 text-lg font-semibold">A2Z Company</span>
