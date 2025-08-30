@@ -10,15 +10,22 @@ import { Textarea } from "@/components/ui/textarea";
 const Home = () => {
   const { isLoggedIn } = useAuth();
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950">
       <header className="px-4 lg:px-6 h-14 flex items-center shadow-sm sticky top-0 z-50 bg-white dark:bg-gray-950">
-        <Link to="/" className="flex items-center justify-center">
+        <Link to="/" className="flex items-center justify-center" onClick={scrollToTop}>
           <Rocket className="h-6 w-6 text-primary" />
           <span className="ml-2 text-lg font-semibold">A2Z Company</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6 items-center">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" to="/">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" to="/" onClick={scrollToTop}>
             Home
           </Link>
           <a className="text-sm font-medium hover:underline underline-offset-4" href="#about">
