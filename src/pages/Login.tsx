@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -22,6 +22,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { showError } from "@/utils/toast";
 import { useAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 const formSchema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
@@ -50,7 +51,13 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="relative flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
+      <Link to="/" className="absolute top-4 left-4 md:top-8 md:left-8">
+        <Button variant="ghost" size="icon">
+          <ArrowLeft className="h-6 w-6" />
+          <span className="sr-only">Back to Home</span>
+        </Button>
+      </Link>
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">Login</CardTitle>
