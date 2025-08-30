@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "../context/AuthContext";
-import { Rocket, Zap, Shield, Cloud } from "lucide-react";
+import { Rocket, Zap, Shield, Cloud, BarChart, Users, Bot } from "lucide-react";
 
 const Index = () => {
   const { isLoggedIn } = useAuth();
@@ -20,9 +20,9 @@ const Index = () => {
           <a className="text-sm font-medium hover:underline underline-offset-4" href="#about">
             About
           </a>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
+          <a className="text-sm font-medium hover:underline underline-offset-4" href="#product">
             Product
-          </Link>
+          </a>
           <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
             Researches
           </Link>
@@ -118,7 +118,47 @@ const Index = () => {
             </div>
           </div>
         </section>
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
+        <section id="product" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                  Our Products
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Discover Our Innovative Product Suite
+                </h2>
+                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  Tools designed to streamline your workflow and boost productivity.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-2 md:gap-12 lg:grid-cols-3">
+              <div className="grid gap-4 text-center p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-950">
+                <BarChart className="h-10 w-10 mx-auto text-primary" />
+                <h3 className="text-xl font-bold">Analytics Dashboard</h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Gain real-time insights and make data-driven decisions with our powerful analytics platform.
+                </p>
+              </div>
+              <div className="grid gap-4 text-center p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-950">
+                <Users className="h-10 w-10 mx-auto text-primary" />
+                <h3 className="text-xl font-bold">Collaboration Hub</h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Bring your team together with seamless communication and project management tools.
+                </p>
+              </div>
+              <div className="grid gap-4 text-center p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-950">
+                <Bot className="h-10 w-10 mx-auto text-primary" />
+                <h3 className="text-xl font-bold">Automation Engine</h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Automate repetitive tasks and optimize your business processes with our intelligent engine.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-950">
           <div className="container px-4 md:px-6">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="space-y-4">
