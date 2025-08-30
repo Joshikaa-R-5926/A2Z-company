@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "../context/AuthContext";
-import { Sparkles, Zap, Shield, Cloud } from "lucide-react";
+import { Rocket, Zap, Shield, Cloud } from "lucide-react";
 
 const Index = () => {
   const { isLoggedIn } = useAuth();
@@ -10,7 +10,7 @@ const Index = () => {
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950">
       <header className="px-4 lg:px-6 h-14 flex items-center shadow-sm">
         <Link to="/" className="flex items-center justify-center">
-          <Sparkles className="h-6 w-6 text-primary" />
+          <Rocket className="h-6 w-6 text-primary" />
           <span className="ml-2 text-lg font-semibold">A2Z Company</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6 items-center">
@@ -49,17 +49,15 @@ const Index = () => {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 dark:from-purple-950 dark:via-blue-950 dark:to-pink-950">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-50 dark:bg-gray-900">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-                      Build the Future, Faster
-                    </span>
+                    Build the Future, Faster
                   </h1>
-                  <p className="max-w-[600px] text-gray-600 md:text-xl dark:text-gray-300">
+                  <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
                     Our next-generation platform empowers teams to build, innovate, and scale at unprecedented speeds.
                   </p>
                 </div>
