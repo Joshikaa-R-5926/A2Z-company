@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "../context/AuthContext";
-import { Rocket, Zap, Shield, Cloud, BarChart, Users, Bot } from "lucide-react";
+import { Rocket, Zap, Shield, Cloud, BarChart, Users, Bot, FileText, FlaskConical, Lightbulb } from "lucide-react";
 
 const Index = () => {
   const { isLoggedIn } = useAuth();
@@ -23,9 +23,9 @@ const Index = () => {
           <a className="text-sm font-medium hover:underline underline-offset-4" href="#product">
             Product
           </a>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
+          <a className="text-sm font-medium hover:underline underline-offset-4" href="#researches">
             Researches
-          </Link>
+          </a>
           <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
             Pricing
           </Link>
@@ -158,7 +158,50 @@ const Index = () => {
             </div>
           </div>
         </section>
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-950">
+        <section id="researches" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-950">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                  Our Research
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Pioneering the Future of Technology
+                </h2>
+                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  Explore our latest findings, whitepapers, and breakthroughs that are pushing the boundaries of innovation.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-2 md:gap-12 lg:grid-cols-3">
+              <div className="grid gap-4 text-left p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-gray-50 dark:bg-gray-900">
+                <FileText className="h-10 w-10 text-primary" />
+                <h3 className="text-xl font-bold">AI in Modern Development</h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  A comprehensive whitepaper on the impact of artificial intelligence on software development lifecycles.
+                </p>
+                <a href="#" className="text-primary font-semibold hover:underline">Read More &rarr;</a>
+              </div>
+              <div className="grid gap-4 text-left p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-gray-50 dark:bg-gray-900">
+                <FlaskConical className="h-10 w-10 text-primary" />
+                <h3 className="text-xl font-bold">Quantum Computing Frontiers</h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Exploring the potential and challenges of quantum computing in solving complex real-world problems.
+                </p>
+                <a href="#" className="text-primary font-semibold hover:underline">Read More &rarr;</a>
+              </div>
+              <div className="grid gap-4 text-left p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-gray-50 dark:bg-gray-900">
+                <Lightbulb className="h-10 w-10 text-primary" />
+                <h3 className="text-xl font-bold">The Ethics of Automation</h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  An in-depth analysis of the ethical considerations and societal impact of widespread automation.
+                </p>
+                <a href="#" className="text-primary font-semibold hover:underline">Read More &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
           <div className="container px-4 md:px-6">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="space-y-4">
