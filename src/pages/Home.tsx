@@ -24,6 +24,9 @@ const Home = () => {
           <a className="text-sm font-medium hover:underline underline-offset-4" href="#about">
             About
           </a>
+          <a className="text-sm font-medium hover:underline underline-offset-4" href="#features">
+            Features
+          </a>
           <a className="text-sm font-medium hover:underline underline-offset-4" href="#product">
             Product
           </a>
@@ -77,7 +80,17 @@ const Home = () => {
               <img
                 alt="Abstract futuristic background representing innovation"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
-                src="https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1550439062-609e15td-xl/relaxed dark:text-gray-400">
+                  At A2Z Company, we believe in the power of technology to transform industries and shape the future. We are a passionate team of engineers, designers, and strategists dedicated to building tools that help businesses of all sizes achieve their full potential.
+                </p>
+                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  Our platform is the culmination of years of research and development, designed to be powerful yet intuitive, secure, and infinitely scalable. We're committed to providing our customers with the resources they need to succeed and innovate.
+                </p>
+              </div>
+              <img
+                alt="A diverse team collaborating in a modern office"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               />
             </div>
           </div>
@@ -363,31 +376,6 @@ const Home = () => {
                   </form>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </section>
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
-          <div className="container px-4 md:px-6">
-            <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
-              <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
-                  About Us
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Our Mission: To Empower Innovation
-                </h2>
-                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  At A2Z Company, we believe in the power of technology to transform industries and shape the future. We are a passionate team of engineers, designers, and strategists dedicated to building tools that help businesses of all sizes achieve their full potential.
-                </p>
-                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Our platform is the culmination of years of research and development, designed to be powerful yet intuitive, secure, and infinitely scalable. We're committed to providing our customers with the resources they need to succeed and innovate.
-                </p>
-              </div>
-              <img
-                alt="A diverse team collaborating in a modern office"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
             </div>
           </div>
         </section>
