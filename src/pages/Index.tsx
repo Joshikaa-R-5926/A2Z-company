@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "../context/AuthContext";
-import { Mountain, Zap, Shield, Cloud } from "lucide-react";
+import { Rocket, Zap, Shield, Cloud } from "lucide-react";
 
 const Index = () => {
   const { isLoggedIn } = useAuth();
@@ -10,7 +10,7 @@ const Index = () => {
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950">
       <header className="px-4 lg:px-6 h-14 flex items-center shadow-sm">
         <Link to="/" className="flex items-center justify-center">
-          <Mountain className="h-6 w-6" />
+          <Rocket className="h-6 w-6 text-primary" />
           <span className="ml-2 text-lg font-semibold">A2Z Company</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6 items-center">
@@ -46,10 +46,10 @@ const Index = () => {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Innovative Solutions from A to Z
+                    Build the Future, Faster
                   </h1>
                   <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                    A2Z Company provides comprehensive solutions to streamline your workflow and boost productivity. Discover how we can help your business grow.
+                    Our next-generation platform empowers teams to build, innovate, and scale at unprecedented speeds.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -77,7 +77,7 @@ const Index = () => {
                   Key Features
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Everything You Need, All in One Place
+                  Everything You Need to Scale
                 </h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Our platform is packed with features designed to enhance collaboration, security, and efficiency.
@@ -87,21 +87,21 @@ const Index = () => {
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
               <div className="grid gap-1 text-center">
                 <Zap className="h-8 w-8 mx-auto text-primary" />
-                <h3 className="text-xl font-bold">Lightning Fast</h3>
+                <h3 className="text-xl font-bold">Blazing Performance</h3>
                 <p className="text-gray-500 dark:text-gray-400">
                   Experience unparalleled speed and performance with our optimized infrastructure.
                 </p>
               </div>
               <div className="grid gap-1 text-center">
                 <Shield className="h-8 w-8 mx-auto text-primary" />
-                <h3 className="text-xl font-bold">Rock-Solid Security</h3>
+                <h3 className="text-xl font-bold">Enterprise-Grade Security</h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  Your data is protected with enterprise-grade security and encryption.
+                  Your data is protected with state-of-the-art security and encryption.
                 </p>
               </div>
               <div className="grid gap-1 text-center">
                 <Cloud className="h-8 w-8 mx-auto text-primary" />
-                <h3 className="text-xl font-bold">Cloud Native</h3>
+                <h3 className="text-xl font-bold">Infinitely Scalable</h3>
                 <p className="text-gray-500 dark:text-gray-400">
                   Access your work from anywhere, on any device, with our fully-managed cloud solution.
                 </p>
