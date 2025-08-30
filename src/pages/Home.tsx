@@ -79,9 +79,9 @@ const Home = () => {
                   <Link to="/register">
                     <Button size="lg">Get Started</Button>
                   </Link>
-                  <Link to="#">
+                  <a href="#about">
                     <Button variant="outline" size="lg" className="bg-transparent text-white border-white hover:bg-white hover:text-primary">Learn More</Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
               <img
