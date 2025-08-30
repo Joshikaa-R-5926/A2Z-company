@@ -14,14 +14,23 @@ const Index = () => {
           <span className="ml-2 text-lg font-semibold">A2Z Company</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6 items-center">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" to="/">
+            Home
+          </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
-            Features
+            About
+          </Link>
+          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
+            Product
+          </Link>
+          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
+            Researches
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
             Pricing
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
-            About
+            Contact
           </Link>
           {isLoggedIn ? (
             <Link to="/dashboard">
