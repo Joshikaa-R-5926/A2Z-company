@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "../context/AuthContext";
-import { Rocket, Zap, Shield, Cloud, BarChart, Users, Bot, FileText, FlaskConical, Lightbulb, Check } from "lucide-react";
+import { Rocket, Zap, Shield, Cloud, BarChart, Users, Bot, FileText, FlaskConical, Lightbulb, Check, MapPin, Phone, Mail } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 const Index = () => {
   const { isLoggedIn } = useAuth();
@@ -29,9 +33,9 @@ const Index = () => {
           <a className="text-sm font-medium hover:underline underline-offset-4" href="#pricing">
             Pricing
           </a>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#">
+          <a className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
             Contact
-          </Link>
+          </a>
           {isLoggedIn ? (
             <Link to="/dashboard">
               <Button>Dashboard</Button>
@@ -301,7 +305,68 @@ const Index = () => {
             </div>
           </div>
         </section>
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-950">
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-950">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                  Contact Us
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Get in Touch
+                </h2>
+                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  Have a question or want to work together? We’d love to hear from you.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-5xl mt-12 grid items-start gap-12 lg:grid-cols-2">
+              <div className="grid gap-8 text-left">
+                <div className="flex items-start gap-4">
+                  <MapPin className="h-8 w-8 text-primary mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold">Our Office</h3>
+                    <p className="text-gray-500 dark:text-gray-400">123 Innovation Drive, Tech City, 560001</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Phone className="h-8 w-8 text-primary mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold">Phone</h3>
+                    <p className="text-gray-500 dark:text-gray-400">(+91) 987-654-3210</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Mail className="h-8 w-8 text-primary mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold">Email</h3>
+                    <p className="text-gray-500 dark:text-gray-400">contact@a2zcompany.com</p>
+                  </div>
+                </div>
+              </div>
+              <Card>
+                <CardContent className="p-6">
+                  <form className="grid gap-4">
+                    <div className="grid gap-2">
+                      <Label htmlFor="name">Name</Label>
+                      <Input id="name" placeholder="Enter your name" />
+                    </div>
+                    <div className="grid gap-2">
+                      <Label htmlFor="email">Email</Label>
+                      <Input id="email" type="email" placeholder="Enter your email" />
+                    </div>
+                    <div className="grid gap-2">
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea id="message" placeholder="Enter your message" className="min-h-[120px]" />
+                    </div>
+                    <Button type="submit" className="w-full">Send Message</Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
           <div className="container px-4 md:px-6">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="space-y-4">
