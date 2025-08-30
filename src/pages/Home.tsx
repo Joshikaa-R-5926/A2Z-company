@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950">
-      <header className="px-4 lg:px-6 h-14 flex items-center shadow-sm sticky top-0 z-50 bg-white dark:bg-gray-950">
+      <header className="px-4 lg:px-6 h-14 flex items-center shadow-sm sticky top-0 z-50 bg-white/80 backdrop-blur-sm dark:bg-gray-950/80">
         <Link to="/" className="flex items-center justify-center" onClick={scrollToTop}>
           <Rocket className="h-6 w-6 text-primary" />
           <span className="ml-2 text-lg font-semibold">A2Z Company</span>
@@ -133,22 +133,28 @@ const Home = () => {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-              <div className="grid gap-1 text-center">
-                <Zap className="h-8 w-8 mx-auto text-primary" />
+              <div className="grid gap-4 text-center group">
+                <div className="bg-primary/10 text-primary rounded-full p-3 inline-flex self-center group-hover:bg-primary group-hover:text-white transition-colors">
+                  <Zap className="h-8 w-8" />
+                </div>
                 <h3 className="text-xl font-bold">Blazing Performance</h3>
                 <p className="text-gray-500 dark:text-gray-400">
                   Experience unparalleled speed and performance with our optimized infrastructure.
                 </p>
               </div>
-              <div className="grid gap-1 text-center">
-                <Shield className="h-8 w-8 mx-auto text-primary" />
+              <div className="grid gap-4 text-center group">
+                <div className="bg-primary/10 text-primary rounded-full p-3 inline-flex self-center group-hover:bg-primary group-hover:text-white transition-colors">
+                  <Shield className="h-8 w-8" />
+                </div>
                 <h3 className="text-xl font-bold">Enterprise-Grade Security</h3>
                 <p className="text-gray-500 dark:text-gray-400">
                   Your data is protected with state-of-the-art security and encryption.
                 </p>
               </div>
-              <div className="grid gap-1 text-center">
-                <Cloud className="h-8 w-8 mx-auto text-primary" />
+              <div className="grid gap-4 text-center group">
+                <div className="bg-primary/10 text-primary rounded-full p-3 inline-flex self-center group-hover:bg-primary group-hover:text-white transition-colors">
+                  <Cloud className="h-8 w-8" />
+                </div>
                 <h3 className="text-xl font-bold">Infinitely Scalable</h3>
                 <p className="text-gray-500 dark:text-gray-400">
                   Access your work from anywhere, on any device, with our fully-managed cloud solution.
@@ -173,21 +179,21 @@ const Home = () => {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-2 md:gap-12 lg:grid-cols-3">
-              <div className="grid gap-4 text-center p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-950">
+              <div className="grid gap-4 text-center p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all bg-white dark:bg-gray-950">
                 <BarChart className="h-10 w-10 mx-auto text-primary" />
                 <h3 className="text-xl font-bold">Analytics Dashboard</h3>
                 <p className="text-gray-500 dark:text-gray-400">
                   Gain real-time insights and make data-driven decisions with our powerful analytics platform.
                 </p>
               </div>
-              <div className="grid gap-4 text-center p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-950">
+              <div className="grid gap-4 text-center p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all bg-white dark:bg-gray-950">
                 <Users className="h-10 w-10 mx-auto text-primary" />
                 <h3 className="text-xl font-bold">Collaboration Hub</h3>
                 <p className="text-gray-500 dark:text-gray-400">
                   Bring your team together with seamless communication and project management tools.
                 </p>
               </div>
-              <div className="grid gap-4 text-center p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-950">
+              <div className="grid gap-4 text-center p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all bg-white dark:bg-gray-950">
                 <Bot className="h-10 w-10 mx-auto text-primary" />
                 <h3 className="text-xl font-bold">Automation Engine</h3>
                 <p className="text-gray-500 dark:text-gray-400">
@@ -213,7 +219,7 @@ const Home = () => {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-2 md:gap-12 lg:grid-cols-3">
-              <div className="grid gap-4 text-left p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-gray-50 dark:bg-gray-900">
+              <div className="grid gap-4 text-left p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all bg-gray-50 dark:bg-gray-900">
                 <FileText className="h-10 w-10 text-primary" />
                 <h3 className="text-xl font-bold">AI in Modern Development</h3>
                 <p className="text-gray-500 dark:text-gray-400">
@@ -221,7 +227,7 @@ const Home = () => {
                 </p>
                 <a href="#" className="text-primary font-semibold hover:underline">Read More &rarr;</a>
               </div>
-              <div className="grid gap-4 text-left p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-gray-50 dark:bg-gray-900">
+              <div className="grid gap-4 text-left p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all bg-gray-50 dark:bg-gray-900">
                 <FlaskConical className="h-10 w-10 text-primary" />
                 <h3 className="text-xl font-bold">Quantum Computing Frontiers</h3>
                 <p className="text-gray-500 dark:text-gray-400">
@@ -229,7 +235,7 @@ const Home = () => {
                 </p>
                 <a href="#" className="text-primary font-semibold hover:underline">Read More &rarr;</a>
               </div>
-              <div className="grid gap-4 text-left p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-gray-50 dark:bg-gray-900">
+              <div className="grid gap-4 text-left p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all bg-gray-50 dark:bg-gray-900">
                 <Lightbulb className="h-10 w-10 text-primary" />
                 <h3 className="text-xl font-bold">The Ethics of Automation</h3>
                 <p className="text-gray-500 dark:text-gray-400">
@@ -256,7 +262,7 @@ const Home = () => {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-12">
-              <div className="grid gap-6 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+              <div className="grid gap-6 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold">Basic</h3>
                   <p className="text-4xl font-bold">₹2,499<span className="text-lg font-normal text-gray-500 dark:text-gray-400">/mo</span></p>
@@ -282,7 +288,7 @@ const Home = () => {
                 </ul>
                 <Button className="w-full">Choose Plan</Button>
               </div>
-              <div className="grid gap-6 p-6 rounded-lg shadow-lg transition-shadow bg-white dark:bg-gray-950 border-2 border-primary relative">
+              <div className="grid gap-6 p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all bg-white dark:bg-gray-950 border-2 border-primary relative">
                 <div className="absolute top-0 -translate-y-1/2 bg-primary text-primary-foreground px-3 py-1 text-sm font-semibold rounded-full">
                   Most Popular
                 </div>
@@ -311,7 +317,7 @@ const Home = () => {
                 </ul>
                 <Button className="w-full">Choose Plan</Button>
               </div>
-              <div className="grid gap-6 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+              <div className="grid gap-6 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold">Enterprise</h3>
                   <p className="text-4xl font-bold">Custom</p>
